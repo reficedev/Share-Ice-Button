@@ -1,0 +1,44 @@
+/**
+ * Style uniquement pour la page d'exemple
+ */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #CCC;
+}
+
+a {
+  color: #0190D0;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.l-container {
+  position: relative;
+  width: 960px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, sans-serif;
+  background: #FFF;
+  padding: 20px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  background: #CCC;
+}

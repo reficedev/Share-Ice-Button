@@ -1,0 +1,173 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    CONFIG
+\*------------------------------------*/
+/*------------------------------------*\
+    $CONTAINER
+\*------------------------------------*/
+/*------------------------------------*\
+    $SHARE
+\*------------------------------------*/
+/**
+ * Conteneur des boutons
+ * 1. Permet d'avoir une largeur de taille automatique
+ */
+#share {
+  /* anim */
+  -webkit-animation: myfirst 1s;
+  /* Chrome, Safari, Opera */
+  animation: myfirst 1s;
+  animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  /* 1 */
+  overflow: hidden;
+  float: right;
+  clear: both;
+  z-index: 1;
+  transition-duration: .2s;
+}
+
+/********** anim *********/
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+  0% {
+    right: 300px;
+    opacity: 0;
+  }
+
+  100% {
+    right: 10px;
+    opacity: 1;
+  }
+}
+/* Standard syntax */
+@keyframes myfirst {
+  0% {
+    right: 300px;
+    opacity: 0;
+  }
+
+  100% {
+    right: 10px;
+    opacity: 1;
+  }
+}
+/**
+ * 1. -100% indique que la valeur sera identique à la largeur du conteneur (ici .share)
+ * Cette valeur sera donc dynamique grâce au display: inline-block ajouté sur le conteneur
+ */
+#share ul {
+  position: relative;
+  right: -100%;
+  /* 1 */
+  padding-left: 0;
+  margin-bottom: 0  !important;
+  margin-top: 0px;
+  background: #FFF;
+  transition-duration: .4s;
+}
+
+#share:hover > ul {
+  right: 0;
+}
+
+/**
+ * 1. Cache le texte pour n'afficher que l'icône
+ */
+#share li, button.icon-share {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  background: white;
+  overflow: hidden;
+  transition-duration: .2s;
+}
+
+#share li {
+  position: relative;
+}
+#share li:hover {
+  transform: scale(1.2);
+  background: #0190d0;
+  z-index: 99;
+}
+
+#share li a, button.icon-share {
+  display: inline-block;
+  text-indent: -9999px;
+  /* 1 */
+  color: #0190d0;
+}
+
+#share li a:hover {
+  color: white;
+}
+
+button.icon-share {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  background: transparent;
+}
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+@font-face {
+  font-family: 'icomoon';
+  src: url("fonts/icomoon.eot?tqgrz4");
+  src: url("fonts/icomoon.eot?#iefixtqgrz4") format("embedded-opentype"), url("fonts/icomoon.woff?tqgrz4") format("woff"), url("fonts/icomoon.ttf?tqgrz4") format("truetype"), url("fonts/icomoon.svg?tqgrz4#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  bottom: 0;
+  font: 20px icomoon;
+  left: 0;
+  padding-top: 25%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-indent: 0;
+  top: 0;
+}
+
+/**
+ * Le nom de la classe à ajouter sur l'élément
+ */
+.icon-mail:before {
+  content: "\e600";
+}
+
+.icon-share:before {
+  content: "\e601";
+}
+
+.icon-twitter:before {
+  content: "\e602";
+}
+
+.icon-facebook:before {
+  content: "\e603";
+}
+
+.icon-gplus:before {
+  content: "\e604";
+}

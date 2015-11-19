@@ -1,0 +1,21 @@
+/**
+ * Style uniquement pour la page d'exemple
+ */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+.l-container {
+  position: relative;
+  width: 960px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Arial, sans-serif;
+  background: #CCC;
+  padding: 20px;
+}
